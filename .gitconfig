@@ -1,0 +1,50 @@
+[alias]
+  ft = fetch tapjoy
+  rbt = rebase tapjoy/master
+  pom = push origin master
+  pf = push --f
+  fe = fetch
+  st = status
+  ci = commit
+  cia = commit --amend
+  co = checkout
+  br = branch
+  sb = show-branch
+  cp = cherry-pick
+  staged = diff --cached
+  rb = rebase
+  rbc = rebase --continue
+  rbs = rebase --skip
+  rl = reflog
+  rs = remote show
+  rt = remote
+  ru = remote update
+  rp = remote prune
+  sm = submodule
+  lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+  po = push origin
+  gd = branch -D
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+[color "branch"]
+  current = green bold
+  local = green
+  remote = red bold
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red
+[user]
+	name = Chris Nixon
+	email = chris.d.nixon@gmail.com
+[core]
+	editor = vim

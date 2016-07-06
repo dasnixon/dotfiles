@@ -1,6 +1,4 @@
 [alias]
-  ft = fetch tapjoy
-  rbt = rebase tapjoy/master
   pom = push origin master
   pf = push --f
   fe = fetch

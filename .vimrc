@@ -17,7 +17,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'troydm/easybuffer.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdtree'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
@@ -60,6 +59,8 @@ endif
 
 syntax on
 colorscheme onedark
+set background=dark
+highlight Normal guibg=black
 
 set incsearch
 set hlsearch

@@ -59,8 +59,6 @@ endif
 
 syntax on
 colorscheme onedark
-set background=dark
-highlight Normal guibg=black
 
 set incsearch
 set hlsearch

@@ -1,0 +1,9 @@
+* https://iterm2.com/
+* https://github.com/tmux/tmux/wiki
+* https://github.com/tmuxinator/tmuxinator
+* https://ohmyz.sh/
+* https://github.com/romkatv/powerlevel10k#oh-my-zsh
+* https://github.com/zsh-users/zsh-autosuggestions
+* https://github.com/ggreer/the_silver_searcher
+* https://postgresapp.com/
+* https://github.com/ycm-core/YouCompleteMe

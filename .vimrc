@@ -20,11 +20,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-sensible'
 Plugin 'ycm-core/YouCompleteMe'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 "ag
 "
@@ -46,21 +44,25 @@ let g:indent_guides_enable_on_vim_startup = 1
 "
 nmap <tab> :NERDTreeToggle<cr>
 
-" onedark - colorscheme
-"
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
-if (empty($TMUX))
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+nnoremap <Leader><space> :noh<Enter>
+
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 syntax on
-colorscheme onedark
 
 set incsearch
 set hlsearch
+set relativenumber
+set ruler
+set textwidth=100
+set colorcolumn=100
 
-nnoremap <Leader><space> :noh<Enter>
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+colorscheme onedark

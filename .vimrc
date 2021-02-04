@@ -59,7 +59,19 @@ set ruler
 set textwidth=100
 set colorcolumn=100
 
+set undodir=~/.vim/undo-dir
+set undofile
+
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+" https://vi.stackexchange.com/a/456
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+autocmd BufWritePre * :call TrimWhitespace()
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

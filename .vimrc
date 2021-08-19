@@ -13,6 +13,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'hail2u/vim-css3-syntax'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'troydm/easybuffer.vim'
 Plugin 'tpope/vim-endwise'
@@ -21,12 +22,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-rails'
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'ycm-core/YouCompleteMe'
 
 "ag
 "
-nnoremap <leader>a :Ag -i<space>
+nnoremap <leader>a :Ag -i --hidden<space>
 
 "ctrlp
 "
@@ -76,5 +78,12 @@ autocmd BufWritePre * :call TrimWhitespace()
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+autocmd BufRead,BufNewFile *.scss setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
 colorscheme onedark

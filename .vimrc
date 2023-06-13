@@ -25,6 +25,13 @@ Plugin 'tpope/vim-rails'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'jparise/vim-graphql'
+Plugin 'prettier/vim-prettier'
+Plugin 'xolox/vim-misc'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'nordtheme/vim'
 
 "ag
 "
@@ -48,6 +55,10 @@ nmap <tab> :NERDTreeToggle<cr>
 
 nnoremap <Leader><space> :noh<Enter>
 
+"gutentags
+"
+let g:gutentags_ctags_tagfile = 'gutentags'
+
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -58,8 +69,9 @@ set incsearch
 set hlsearch
 set relativenumber
 set ruler
-set textwidth=100
-set colorcolumn=100
+set textwidth=119
+set colorcolumn=119
+set autoread
 
 set undodir=~/.vim/undo-dir
 set undofile
@@ -81,9 +93,15 @@ filetype plugin indent on    " required
 
 autocmd BufRead,BufNewFile *.scss setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
+"Flagging Unnecessary Whitespace
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.rb,*.js,*.ts match BadWhitespace /\s\+$/
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+set encoding=utf-8
+set background=dark
 
 colorscheme onedark
